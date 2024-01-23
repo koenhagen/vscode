@@ -60,7 +60,7 @@ jobs:
         uses: koenhagen/measure-energy-action@v0.27
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          run: yarn --cwd test/integration/browser compile; DISPLAY=:10 ./scripts/test.sh; yarn test-node
+          run: DISPLAY=:10 ./scripts/test.sh; yarn test-node
 
 #      - name: Run Unit Tests (Electron)
 #        id: electron-unit-tests
